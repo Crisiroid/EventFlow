@@ -4,15 +4,30 @@
 
 <main>
     <div class="container">
-        <form method="post" action="Usercontroller/Login">
-            <label for="Username" class="form-label">Username: </label>
-            <input type="text" class="form-control" name="Username" />
-            <label for="Password" class="col-form-label">Password:</label>
-            <input type="password" class="form-control" name="Password" />
-            
-            <input type="submit" value="Login" />
+        <div class="row">
+            <div class="col-6">
+                <form method="post" action="/Users/Login">
+                    <label for="Username" class="form-label">Username: </label>
+                    <input type="text" class="form-control" name="Username" />
+                    <label for="Password" class="col-form-label">Password:</label>
+                    <input type="password" class="form-control" name="Password" />
 
-            <p>Don't have an account? <a>SIGN UP!</a></p>
-        </form>
+                    <input type="submit" value="Login" class="btn btn-success" />
+
+                    <p>Don't have an account? <a href="/User/Register">SIGN UP!</a></p>
+                </form>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        Unlock the Power of Seamless Event Management with EventFlow
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Why Eventflow?</h5>
+                        <p class="card-text">In today's fast-paced world, organizing and managing events can be a daunting task. Whether you're planning a corporate conference, a wedding, a charity fundraiser, or a community gathering, the sheer complexity of coordinating all the moving parts can quickly become overwhelming. This is where EventFlow comes to the rescue, offering a simple yet powerful solution to streamline your event management process. In this article, we'll explore why EventFlow should be your go-to choice for event planning and execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
