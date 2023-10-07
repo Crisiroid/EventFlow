@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EventFlow.Data
 {
-    public class EventFlow : DbContext
+    public class EventFlowDB : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,7 +15,7 @@ namespace EventFlow.Data
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public EventFlow() : base("name=EventFlow")
+        public EventFlowDB() : base("name=EventFlowDB")
         {
         }
 

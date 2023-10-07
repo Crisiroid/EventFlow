@@ -13,7 +13,7 @@ namespace EventFlow.Controllers
 {
     public class AdminsController : Controller
     {
-        private EventFlow db = new EventFlow();
+        private EventFlowDB db = new EventFlowDB();
 
         // GET: Admins
         public ActionResult Index()
