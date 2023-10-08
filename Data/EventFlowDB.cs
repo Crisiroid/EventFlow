@@ -19,6 +19,6 @@ namespace EventFlow.Data
         {
         }
 
-        public System.Data.Entity.DbSet<EventFlow.Models.User> Users { get; set; }
+        public System.Data.Entity.DbSet<EventFlow.Models.Customer> Users { get; set; }
     }
 }

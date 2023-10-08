@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventFlow.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,17 @@ namespace EventFlow.Controllers
         {
             if(returnUrl == null)
             {
-
+                if(Customer.CheckLogin(username, password) == "200")
+                {
+                    Session["username"] = username;
+                    TempData["pm"] = "Login Successful! Welcome";
+                    return RedirectToAction("Panel", "Users");
+                }
+                else
+                {
+                    TempData["pm"] = "Wrong Username or Password!";
+                    return RedirectToAction("Index", "Home");
+                }
             }
         }
     }

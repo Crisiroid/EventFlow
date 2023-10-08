@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EventFlow.Models
 {
-    public class User
+    public class Customer
     {
         [Key] public int Id { get; set; }
         [Required] public string Name { get; set; }
@@ -16,9 +16,17 @@ namespace EventFlow.Models
         [Required] public string Role { get; set; }
 
 
-        public static bool CheckLogin(string email, string password)
+        public static string CheckLogin(string email, string password)
         {
-            return DatabaseModel.db.Users.Any(x => x.Email == email && x.Password == password);
+            if(DatabaseModel.db.Users.Any(x => x.Email == email && x.Password == password))
+            {
+                return "200";
+            }
+            else
+            {
+                return "300";
+            }
+            
         }
 
     }
