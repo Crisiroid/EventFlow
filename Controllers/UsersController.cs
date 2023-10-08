@@ -8,10 +8,17 @@ namespace EventFlow.Controllers
 {
     public class UsersController : Controller
     {
-        // GET: Users
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Login(string returnUrl, string username, string password)
+        {
+            if(returnUrl == null)
+            {
+
+            }
         }
     }
 }

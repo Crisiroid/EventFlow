@@ -15,5 +15,13 @@ namespace EventFlow.Models
         [Required] public string PhoneNumber { get; set; }
         [Required] public string Role { get; set; }
 
+
+        public static bool CheckLogin(string email, string password)
+        {
+            return DatabaseModel.db.Users.Any(x => x.Email == email && x.Password == password);
+        }
+
     }
+
+
 }

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using EventFlow.Data;
 
 namespace EventFlow.Models
 {
     public class DatabaseModel
     {
+        public static EventFlowDB db = new EventFlowDB();
     }
 }
