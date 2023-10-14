@@ -3,5 +3,31 @@
     ViewBag.Title = "Register";
 }
 
-<h2>Register</h2>
+<main>
+    <h2>Sign Up!</h2>
+    <p>Please Fill out the Following Form</p>
+    <form action="/Users/Register" method="post">
+        <label for="Name" class="col-form-label">Name: </label>
+        <input type="text" class="form-control" name="Name" />
 
+        <label for="Email" class="col-form-label">Email: </label>
+        <input type="email" class="form-control" name="Email" />
+
+        <label for="PhoneNumber" class="col-form-label">Phone Number: </label>
+        <input type="number" class="form-control" name="PhoneNumber" />
+
+        <label for="Password" class="col-form-label">Password: </label>
+        <input type="password" class="form-control" name="Password" />
+
+        <label for="Role">Role:</label>
+        <select name="Role" class="form-select">
+            <option value="Operator">Operator</option>
+            <option value="User">User</option>
+        </select>
+        <br />
+
+        <input type="submit" class="btn btn-success" value="Register" />
+
+
+    </form>
+</main>

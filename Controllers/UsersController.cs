@@ -16,8 +16,6 @@ namespace EventFlow.Controllers
 
         public ActionResult Login(string returnUrl, string username, string password)
         {
-            if(returnUrl == null)
-            {
                 if(Customer.CheckLogin(username, password) == "200")
                 {
                     Session["username"] = username;
@@ -29,7 +27,6 @@ namespace EventFlow.Controllers
                     TempData["pm"] = "Wrong Username or Password!";
                     return RedirectToAction("Index", "Home");
                 }
-            }
         }
         public ActionResult Register()
         {
