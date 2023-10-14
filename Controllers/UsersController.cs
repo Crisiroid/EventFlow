@@ -31,5 +31,9 @@ namespace EventFlow.Controllers
                 }
             }
         }
+        public ActionResult Register()
+        {
+            return View();
+        }
     }
 }
