@@ -15,7 +15,7 @@ namespace EventFlow.Models
         [Required] public string PhoneNumber { get; set; }
         [Required] public string Role { get; set; }
 
-
+        //Finding Methods
         public static string CheckLogin(string email, string password)
         {
             if(DatabaseModel.db.Users.Any(x => x.Email == email && x.Password == password))
@@ -27,6 +27,21 @@ namespace EventFlow.Models
                 return "300";
             }
             
+        }
+
+        //Editing Methods
+        public static string Register(Customer user)
+        {
+            try 
+            {
+                DatabaseModel.db.Users.Add(user);
+                DatabaseModel.db.SaveChanges();
+                return "200";
+            }
+            catch(Exception e)
+            {
+                return e.Message;
+            }
         }
 
     }
