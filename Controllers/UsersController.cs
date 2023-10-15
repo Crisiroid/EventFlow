@@ -32,5 +32,21 @@ namespace EventFlow.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Register(Customer user)
+        {
+            string res = Customer.Register(user);
+            if(res == "200")
+            {
+                TempData["pm"] = "User Created Successfully. please Login!";
+                return RedirectToAction("Login", "Users");
+            }
+            else
+            {
+                TempData["pm"] = res;
+                return View();
+            }
+        }
     }
 }
