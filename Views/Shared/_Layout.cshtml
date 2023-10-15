@@ -9,6 +9,10 @@
 </head>
 <body>
     @Html.Partial("NavBar")
+    <p> @if (ViewBag.pm != null)
+    {
+        @ViewBag.pm
+    }</p>
     <div class="container body-content">
         @RenderBody()
         <hr />

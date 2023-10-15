@@ -10,6 +10,10 @@ namespace EventFlow.Controllers
     {
         public ActionResult Index()
         {
+            if (TempData["pm"] != null)
+            {
+                ViewBag.pm = TempData["pm"].ToString();
+            }
             return View();
         }
 
