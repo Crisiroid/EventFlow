@@ -81,3 +81,6 @@ C:\Users\Administrator\source\repos\EventFlow\EventFlow\bin\EntityFramework.dll
 C:\Users\Administrator\source\repos\EventFlow\EventFlow\bin\EntityFramework.SqlServer.dll
 C:\Users\Administrator\source\repos\EventFlow\EventFlow\bin\EntityFramework.xml
 C:\Users\Administrator\source\repos\EventFlow\EventFlow\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\source\repos\EventFlow\EventFlow\obj\Debug\EventFlow.Migrations.InitialCreate.resources
+C:\Users\Administrator\source\repos\EventFlow\EventFlow\obj\Debug\EventFlow.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\EventFlow\EventFlow\obj\Debug\EventFlow.Migrations.hello.resources
