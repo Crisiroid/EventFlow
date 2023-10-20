@@ -41,7 +41,7 @@ namespace EventFlow.Controllers
         public ActionResult Register(Customer user)
         {
             string res = Customer.Register(user);
-            if(res == "200")
+            if(res.Equals("200"))
             {
                 TempData["pm"] = "User Created Successfully. please Login!";
                 return RedirectToAction("Login", "Users");

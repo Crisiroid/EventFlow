@@ -34,9 +34,17 @@ namespace EventFlow.Models
         {
             try 
             {
-                DatabaseModel.db.Users.Add(user);
-                DatabaseModel.db.SaveChanges();
-                return "200";
+                if (user != null)
+                {
+                    DatabaseModel.db.Users.Add(user);
+                    DatabaseModel.db.SaveChanges();
+                    return "200";
+                }
+                else
+                {
+                    return "Error";
+                }
+                
             }
             catch(Exception e)
             {
