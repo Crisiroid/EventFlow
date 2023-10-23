@@ -69,5 +69,13 @@ namespace EventFlow.Controllers
             }
 
         }
+        public ActionResult Panel(int id)
+        {
+            if(id == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
+        }
     }
 }
