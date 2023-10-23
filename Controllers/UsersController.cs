@@ -52,5 +52,22 @@ namespace EventFlow.Controllers
                 return View();
             }
         }
+
+        public ActionResult Login(string email, string password)
+        {
+            string res = Customer.CheckLogin(email, password);
+
+            if (res.Equals("200"))
+            {
+                TempData["pm"] = "Welcome!";
+                return RedirectToAction("Panel", "Users");
+            }
+            else
+            {
+                TempData["pm"] = "Wrong Information";
+                return RedirectToAction("Index", "Home");
+            }
+
+        }
     }
 }
